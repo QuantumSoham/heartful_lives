@@ -1,0 +1,84 @@
+body {
+	font-family: 'Poppins';
+    background-color:rgb(40, 25, 16);
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 200%;
+    min-height: 200%;
+    z-index:-100;
+	background-repeat: repeat-y;
+  }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+    border-radius: 5px;
+    
+}
+.container h1
+{
+     
+      color: azure;
+     
+      text-align: center;
+      
+}
+.job-box {
+	background-color: rgba(217, 211, 211, 0.4);
+    color:white;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+}
+
+.job-box img {
+	width: 30%;
+	height: auto;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+.job-info {
+	width: 70%;
+}
+
+.job-info h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.job-info p {
+	margin-bottom: 20px;
+}
+
+.job-info button {
+	background-color: #ec2020;
+	color: #d8d8d8;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+    transition:0.3s;
+}
+
+.job-info button:hover {
+	background-color: #a00101;
+    font-size: 1.5rem;
+    transition:0.3s;
+}
+
+#search {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}

@@ -3,6 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    background-image: url("../images/sc2.jpg");
+    
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
   }
   
   .container {
@@ -45,14 +49,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #3d3229;
+    
   }
   
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #e0e0e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
