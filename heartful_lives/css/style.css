@@ -18,10 +18,11 @@ button, body
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        text-align: center;
+        
 }
 .fullContainer
 {
+        
         width:100%;
 }
 .container
@@ -259,6 +260,7 @@ header nav ul li a:hover
 }
 
  .cards {
+        text-align: center;
         display: flex;
         flex-wrap: wrap;
         padding: 30px;
@@ -297,6 +299,7 @@ header nav ul li a:hover
 
 
  .cards> div p {
+        text-align: center;
         font-size: 14px;
         margin-top: 15px;
         }
@@ -343,6 +346,7 @@ header nav ul li a:hover
 }
 
  .cards1> div {
+        text-align: center;
         width: 350px;
         background-color: var(--gray);
         padding: 35px;
@@ -370,6 +374,7 @@ header nav ul li a:hover
 
 
  .cards1> div p {
+        text-align: center;
         font-size: 14px;
         margin-top: 15px;
         }
@@ -404,6 +409,7 @@ header nav ul li a:hover
 /* *****************************  */
 
 .cards2 {
+        text-align: center;
         display: flex;
         flex-wrap: wrap;
         padding: 30px;
@@ -442,6 +448,7 @@ header nav ul li a:hover
 
 
  .cards2> div p {
+        text-align: center;
         font-size: 14px;
         margin-top: 15px;
         }
