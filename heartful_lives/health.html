@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body and Healthcare</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            padding-top: 100px; /* Added space for the header */
+            background: #e8d09f;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8); /* Opacity background */
+            padding: 10px 0;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000; /* Ensure the header is above all other content */
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+        button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #f44336; /* Red background */
+            color: white;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+        }
+        button:hover {
+            background: #d32f2f; /* Deeper red on hover */
+            transform: scale(1.05); /* Enlarge a bit on hover */
+        }
+        .frame {
+            width: 70%; /* Enlarged map size */
+            height: 600px; /* Increased height */
+            border: 1px solid black;
+        }
+        .doctors-list {
+            width: 20%;
+            padding: 10px;
+            overflow-y: scroll;
+            height: 500px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .doctor-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Body and Healthcare</h1>
+    </header>
+    <div class="buttons">
+        
+            <button onclick="loadIframe('https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31120.185022871956!2d80.15335516349293!3d12.841781949963515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdoctors%20near%20me!5e0!3m2!1sen!2sin!4v1708538696321!5m2!1sen!2sin')">Doctors</button>
+            <button onclick="loadIframe('https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31120.164696962864!2d80.1533551434305!3d12.841946109586267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stherapists%20near%20me!5e0!3m2!1sen!2sin!4v1708538999033!5m2!1sen!2sin')">Therapists</button>
+            <button onclick="loadIframe('https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d55518.964955740674!2d80.21107575559094!3d12.858380453963541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitals%20near%20me!5e0!3m2!1sen!2sin!4v1708539125477!5m2!1sen!2sin')">Hospitals</button>
+    </div>
+    <iframe class="frame" id="iframe2" name="iframe2"></iframe>
+    <div class="doctors-list" id="doctors-list"></div>
+
+    <script>
+        function loadIframe(url) {
+            document.getElementById('iframe2').src = url;
+        }
+
+        const doctors = [
+            
+        { name: "Dr. Arjun Reddy", location: "Chennai", description: "Cardiologist known for advanced treatment in heart care." },
+        { name: "Dr. Priya Srinivasan", location: "Chennai", description: "Dermatologist with a focus on skin allergies and treatments." },
+        { name: "Dr. Rajesh Kumar", location: "Chennai", description: "Orthopedic surgeon specializing in sports injuries." },
+        { name: "Dr. Lakshmi Iyer", location: "Chennai", description: "Gynecologist providing comprehensive women's health care." }
+
+        ];
+
+        function renderDoctors() {
+            const doctorsList = document.getElementById('doctors-list');
+            doctorsList.innerHTML = '';
+
+            doctors.forEach(doctor => {
+                const doctorItem = document.createElement('div');
+                doctorItem.classList.add('doctor-item');
+                doctorItem.innerHTML = `
+                    <h3>${doctor.name}</h3>
+                    <p>${doctor.location}</p>
+                    <button onclick="loadIframe('https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31120.185022871956!2d80.15335516349293!3d12.841781949963515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdoctors%20near%20me!5e0!3m2!1sen!2sin!4v1708538696321!5m2!1sen!2sin')">Locate</button>
+                `;
+
+                doctorsList.appendChild(doctorItem);
+            });
+        }
+
+        renderDoctors();
+    </script>
+</body>
+</html>

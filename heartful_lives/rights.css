@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('background.jpg');
+    background-image: url("./images/img5.jpg");
     background-size: cover;
   }
   
@@ -10,13 +10,13 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(24, 24, 24, 0.45);
     border-radius: 5px;
   }
   
   h1 {
     text-align: center;
-    color: #333;
+    color: #fffdfd;
   }
   
   #search {
@@ -27,17 +27,19 @@ body {
   }
   
   .right-item {
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
   }
   
   .right-item h3 {
+    color:#fffdfd;
     margin: 0;
   }
   
   .right-item p {
+    color:#fffdfd;
     margin: 10px 0;
   }
   
